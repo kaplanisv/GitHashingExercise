@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Get the 4-digit integer as command-line input
+input=$1
+
+# Calculate SHA-256 hash of the input
+hash_output=$(echo -n "$input" | sha256sum)
+
+# Save the hash to hash_output.txt
+echo $hash_output > hash_output.txt
